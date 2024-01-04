@@ -1,0 +1,74 @@
+.swatchy-element {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin: 0; /* Increased margin */
+    padding: 24px; /* Increased padding */
+    background: white;
+    border-radius: 8px;
+    width: 400px; /* Increased width */
+    height: 380px; /* Increased height */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    max-height: 100%; /* Ensure it doesn't exceed the viewport height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%); /* Center the element */
+}
+
+
+.swatchy-swatches {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    grid-gap: 8px 2px;
+}
+
+.swatchy-color-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+}
+
+.swatchy-color-button {
+    cursor: pointer;
+}
+
+.swatchy-display {
+    margin: 4px;
+    height: 48px;
+    max-width: 48px;
+    border-radius: 8px;
+    border: none;
+}
+
+#editcolorPicker {
+    position: fixed;
+    bottom: 2%;
+    left: 38%;
+    display: block;
+}
+
+.swatchy-trigger{
+    background-color: #d6e0e4;
+}
+
+.swatchy-output {
+    text-align: center;
+}
+
+#classColor{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#eventColor{
+    text-align: center;
+    margin: 0px 10px;
+    width: 100%;
+    height: 35px;
+    box-shadow: 0px 0px 3px gray;
+    border: none;
+    border-radius: 5px;
+    color:#fff;
+}

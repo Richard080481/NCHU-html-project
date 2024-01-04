@@ -1,0 +1,346 @@
+#mainCalendar{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mainCalendar button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px px #64CCC5;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: #201F1D;
+  font-size: medium;
+}
+
+
+#calendarheader {
+  padding: 10px;
+  color: #64CCC5;
+  font-size: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#calendarheader button {
+  background-color:#64CCC5;
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #DAFFFB;
+}
+
+#weekdays div {
+  width: 14%;
+  padding: 10px;
+  text-align: center;
+  margin: 4px;
+}
+
+#calendar {
+  width: 100%;
+  height: 83%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.day {
+  width: 13.27%;
+  padding: 6px;
+  height: 14%;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #414d4b;
+  border-radius: 4px;
+  margin: 0.5%;
+  box-shadow: 0px 0px 8px #414d4b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.day p{
+  margin: 0;
+  font-size: 15px;
+}
+
+.day:hover {
+  background-color: #64CCC5;
+}
+
+.day + #currentDay {
+  background-color:#DAFFFB;
+  color: #292827;
+}
+.padding {
+  cursor: default !important;
+  background-color: #292827 !important;
+  box-shadow: none !important;
+  border-radius: 4px;
+}
+
+/*new event-----------------*/
+#newEventModal{
+  height: 80%;
+  overflow-y:auto;
+}
+
+#newEventModal {
+  display: none;
+  z-index: 600;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  top:52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #427571;
+}
+
+.btnBox{
+  display: flex;
+  justify-content: center;
+}
+
+#deleteButton{
+  display: none;
+}
+
+.btnBox button{
+  margin: 0 5px;
+}
+
+
+#newEventModal h3{
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+#newEventModal form{
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+
+.inputField {
+  border: 0px solid #a0a0a0; /* 邊框更細 */
+  padding: 3px; /* 內邊距減少 */
+  border-radius: 5px;
+  margin-top: 5px; /* 上下外邊距減少 */
+  box-shadow: 0px 0px 2px gray;
+  font-size: 14px; /* 字體大小減小，如果需要 */
+  width: 95%; /* 調整寬度，如果需要 */
+}
+
+#newEventModal div {
+  margin:10px 0;
+}
+
+#eventTitleInput {
+  padding: 3px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid rgba(255, 0, 0, 0.466);
+}
+#deleteButton {
+  background-color: #F7CDCE;
+}
+#saveButton{
+  background-color: #96AEDA;
+}
+#eventText {
+  font-size: 14px;
+}
+
+#repeat-select{
+  background-color: #d6e0e4;
+}
+
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color:rgba(24, 69, 71, 0.5);
+}
+
+/*event box-----*/
+#today, #month{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.cHeader {
+  padding: 10px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cHeader p{
+  margin: 0;
+  color:#64CCC5;
+  font-size: 26px;
+}
+
+#pickDayDisplay{
+  font-size: 20px;
+}
+
+.cBox{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.event{
+  height: 14%;
+  box-sizing: border-box;
+  background-color: #414d4b;
+  border-radius: 4px;
+  margin: 4% 2%;
+  box-shadow: 0px 0px 8px #414d4b;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  color: #fff;
+}
+
+.event:active{
+  background-color:#DAFFFB;
+  color: #292827;
+}
+
+.event:hover{
+  background-color:#64CCC5;
+}
+
+.eventTime{
+  flex-basis:28%;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  font-size: small;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.eventStart{
+  display: flex;
+}
+
+.eventTagColor{
+  width: 5px;
+  background-color: #64CCC5;
+  border-radius: 4px;
+  height: 90%;
+  margin: 0 5px;
+}
+
+.eventName{
+  font-size: 18px;
+  padding: 5px;
+}
+
+/*calendar event point*/
+.eventPointDiv{
+  flex-basis: 50%;
+  display: flex !important;
+  margin: 0;
+  align-content: center;
+  flex-direction: row;
+  padding: 1px;
+}
+
+.point{
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  margin: 0 2px;
+}
+
+/*tag color*/
+.color1 {
+  background-color: #64CCC5;
+}
+
+.color2 {
+  background-color: #009788;
+}
+
+.color3 {
+  background-color: #039be6;
+  
+}
+
+.color4 {
+  background-color: #f5511e;
+}
+
+.color5 {
+  background-color: #ef6c00;
+}
+
+.color6 {
+  background-color: #ef9300;
+}
+
+.color7 {
+  background-color: #ad1457;
+}
+
+.color8 {
+  background-color: #d81a60;
+}
+
+.color9 {
+  background-color: #d60000;
+}
+
+.color10 {
+  background-color: #7986cc;
+}
+
+.color11 {
+  background-color: #b39ddb;
+}
+
+.color12 {
+  background-color: #9e69af;
+}
+
+.color13 {
+  background-color: #795547;
+}
+
+.color14 {
+  background-color: #616161;
+}
+
+.color15 {
+  background-color: #a79b8d;
+}
